@@ -8,3 +8,4 @@ cp -r /home/sam/html /home/sam/repo/literate-octo-system/http/
 git add --all
 git commit -m "updated"
 git push
+rm -r /home/sam/repo/literate-octo-system/http/
