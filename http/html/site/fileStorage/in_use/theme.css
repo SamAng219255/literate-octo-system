@@ -1,0 +1,190 @@
+#header {
+	color:#000000;
+	font-size:50px;
+}
+a {
+	color:#000000;
+}
+a:hover {
+	color:#0000ff;
+}
+a:active {
+	color:#ffffff;
+}
+.boxed {
+  border: 1px solid #111111;
+    margin-left:auto;
+    margin-right:auto;
+}
+#fileStorageLink:link {
+	color:#50875a
+}
+#fileStorageLink:hover {
+	color:#508750
+}
+#fileStorageLink:active {
+	color:#ffffff
+}
+#fileStorageLink:visited {
+	color: #000000;
+}
+.miniHead {
+	font-size: 30px;
+}
+
+		body {
+			background-color: #247EFC;
+			overflow: hidden;
+		}
+		#topBar {
+			width: 100%;
+			position: absolute;
+			height: 5%;
+			background-color: #808080;
+			top: 0px;
+			left: 0px;
+			z-index: 1000;
+			padding: 0px;
+		}
+		#center {
+			position: absolute;
+			width: 66.67%;
+			background-color: #C0FFD0;
+			top: 5%;
+			left: 16.67%;
+			z-index: 100;
+			padding: 10px;
+		}
+		#leftSidebar {
+			position: absolute;
+			height: 100%;
+			width: 16.67%;
+			background-color: #247EFC;
+			top: 5%;
+			left: 0%;
+			z-index: 0;
+			visibility: visible;
+		}
+		#rightSidebar {
+			position: absolute;
+			height: 100%;
+			width: 16.67%;
+			background-color: #247EFC;
+			top: 5%;
+			left: 83.33%;
+			z-index: 0;
+			visibility: visible;
+		}
+		#content {
+			width: 100%;
+			overflow: scroll;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-color: #247EFC;
+		}
+		#title {
+			width:16.67%;
+			float: left;
+			margin: 0px;
+			height: 100%;
+			padding: 0px;
+			text-align: center;
+			vertical-align: text-top;
+			background-color: #8CBFD9;
+			color: black;
+			font-style: oblique;
+			font-weight: bold;
+			font-size: 150%;
+		}
+		#title:after {
+			content: "";
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		#title:hover {
+			color: black !important;
+		}
+		.topBarButton {
+			float: left;
+			margin: 0px;
+			height: 100%;
+			padding: 0px;
+			text-align: center;
+			vertical-align: text-top;
+			padding: 0% 8px;
+			background: #808080;
+			-webkit-transition:color 0.35s ease-out, background 0.5s ease-in;
+			color: white;
+			text-decoration: none;
+		}
+		.topBarButton:after {
+			content: "";
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.topBarButton:hover {
+			background: white !important;
+			color: blue !important;
+		}
+		#topButtons {
+			width: 66.67%;
+			float: left;
+		}
+		#login {
+		    padding: 0% 8px;
+		    float: right;
+		    visibility: hidden;
+		}
+		#login:hover {
+			background: #808080;
+			color: white;
+		}
+		#loginMenu {
+		    text-decoration: none;
+		    color: white;
+		    font-size: 20px;
+		    display:inline-block;
+		    position: absolute;
+		    top: 100%;
+		    left: 83.33%;
+		    width: 16.66%;
+		    float: left;
+		    background-color: #808080;
+		    visibility: hidden;
+		    text-align: left;
+			padding: 2px;
+		}
+		#login:hover #loginMenu {
+			visibility: visible;
+		}
+		#register {
+		    padding: 0% 8px;
+		    float: right;
+		    visibility: hidden;
+		}
+		#register:hover {
+			background: #808080;
+			color: white;
+		}
+		#registerMenu {
+		    text-decoration: none;
+		    color: white;
+		    font-size: 20px;
+		    display:inline-block;
+		    position: absolute;
+		    top: 100%;
+		    left: 83.33%;
+		    width: 16.66%;
+		    float: left;
+		    background-color: #808080;
+		    visibility: hidden;
+		    text-align: left;
+			padding: 2px;
+		}
+		#register:hover #registerMenu {
+			visibility: visible;
+		}

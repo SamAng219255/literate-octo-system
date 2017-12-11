@@ -1,0 +1,9 @@
+
+			<div>Parametric Math Functions:</div>
+			<div>x=<input type="text" id="JsMFunc1" placeholder="Function 1"></input>,<br />y=<input type="text" id="JsMFunc1b" placeholder="Function 1"></input></div><br />
+			<div>x=<input type="text" id="JsMFunc2" placeholder="Function 2"></input>,<br />y=<input type="text" id="JsMFunc2b" placeholder="Function 2"></input></div><br />
+			<div>x=<input type="text" id="JsMFunc3" placeholder="Function 3"></input>,<br />y=<input type="text" id="JsMFunc3b" placeholder="Function 3"></input></div><br />
+			<div>x=<input type="text" id="JsMFunc4" placeholder="Function 4"></input>,<br />y=<input type="text" id="JsMFunc4b" placeholder="Function 4"></input></div><br />
+			<p></p>
+			<div>Range:</div>
+			<div>Start:<input type="number" id="tStart"></input>,<br />End:<input type="number" id="tEnd"></input></div>

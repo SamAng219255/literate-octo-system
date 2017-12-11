@@ -1,0 +1,139 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+<title>Help, A Great Adventure</title>
+<link rel="shortcut icon" href="../../fileStorage/in_use/help.png"></link>
+<link rel="stylesheet" type="text/css" href="../../fileStorage/in_use/theme.css">
+<style>
+	.navigate {
+		border-style:ridge;
+		border-width:2;
+		margin:0px;
+		padding:0px;
+		border-color:#444444;
+		padding: 3px 5px;
+	}
+	#helpText {
+		width:90%;
+		margin:10px 5%;
+		height:600px;
+		background-image:url(../../fileStorage/in_use/tree.png);
+		background-repeat:no-repeat;
+		background-position:center;
+		background-color:#cccccc;
+	}
+</style>
+<script src="../../fileStorage/in_use/aGreatAdventure/organization_and_grammar.js"></script>
+<script src="../../fileStorage/in_use/aGreatAdventure/newAGreatAdventureProgram.js"></script>
+<script>
+	function help(page) {
+		clearText();
+		for(var i=0; i<helpTexts[page].length; i++) {
+			var para = document.createElement("p");
+			para.setAttribute("class", "text");
+			var node = document.createTextNode(helpTexts[page][i]);
+			para.appendChild(node);
+			var element = document.getElementById("helpText");
+			element.appendChild(para);
+		}
+	}
+</script>
+<script>
+	var helpTexts=[
+		["Valid inputs are: "],
+		["The primary actions are Inventory, Health, collect, hunt, attack, craft, build, cook, sleep, eat, equip, and smelt. (collect, hunt, attack, craft, build, cook, and smelt are covered under other sections and Inventory and health are combined in here.)",
+			"Type Inventory to see your inventory and type Health to see your health.",
+			"As long as you are in a space that inclues a cabin you can sleep. Sleeping restores five points of health and removes poison.",
+			"You can eat food to restore health. Meat will restore two points of health and give you one turn of poison, effectively giving you one point of health. Cooked meat will restore three points of health.",
+			"You can equip armor and later stuff such as rings and amulets."],
+		["Collectables are objects you can collect.",
+			"In a forest biome can collect sticks and trees if you have an axe. In a rocky biome you can collect rocks. In a plains biome you can collect long grass."],
+		["Some animals you can hunt. Hunting requires a bow and at least one arrow.",
+			"You can hunt deer, they drop hide and meat."],
+		["Most creatures are hostile and will attack you, so you can attack them.",
+			"You can attack bears and snakes and later you will be able to deal more damage by crafting a sword. Bears drop two hide."],
+		["You can craft objects that you can't collect from that which you can collect.",
+			"You can craft a sharp rock from a rock and a hard rock. You can craft a cord from long grass. You can craft an axe from a sharp rock, a stick, and a cord. You can craft a bow from a stick and a cord. You can craft 3 arrows from a sharp rock and a stick. You can craft 2 leather from 2 hide. You can craft leather armor from 5 leather. You can craft iron armor from 5 iron."],
+		["You can build structures from objects you collect or craft.",
+			"You can build a log cabin from 3 logs. You can build a campfire from two hard rocks and 3 sticks. You can build a forge using five rocks."],
+		["You cook using a campfire.",
+			"You can cook meat into cooked meat. You can cook a log into five charcoal."],
+		["Armor will block some points of melee damage.",
+			"Leather armor blocks one point of damage."],
+		["Using a forge you can smelt.",
+			"You can smelt a meteor into iron."],
+		["When entering your input you must type the exact strings from the \"Valid Inputs\" section of this page. note: DO NOT include any quotation marks.",
+			"Most commands require arguments following them. (i.e. to craft a cord you would enter \"craft cord\".)",
+			"If you don't give a known string in an argument you may then enter the correct argument (and all following arguments) without entering the previous command/arguments.",
+			"There is an in game help menu of sorts where you enter the command \"HELP\" with an argument of one of the commands and it will give you the exact syntax for that command including all arguments. It does not include the \"END\" or \"TEXT\" commands.",
+			"The \"END\" comand stops the game and the \"TEXT\" comand makes it repeat the text on your enviroment."]
+	];
+	helpTexts[0]=addToArray(helpTexts[0],textListSimple(alphabetize(removeDuplicates(validInputs))));
+</script>
+</head>
+<body>
+	<div id="topBar">
+		<div id="title" class="topBarButton">A Great Help</div>
+		<div id="topButtons">
+			<a class="topBarButton" href="../../home/" style="font-weight:bold">Home</a>
+			<a class="topBarButton" href="../" style="font-weight:bold">A Great Adventure</a>
+			<a class="topBarButton" href="../help">Help</a>
+			<a class="topBarButton" href="../../simulations/" style="font-weight:bold">Simulations</a>
+			<a class="topBarButton" href="../../simulations/Game_of_Life/">Game of Life</a>
+			<a class="topBarButton" href="../../simulations/Gravity/">Gravity</a>
+		</div>
+		<div id="login" class="topBarButton">Login
+			<div id="loginMenu">
+				<div class="loginDrop">
+					<input id="Username" placeholder="Username" type="text">
+				</div>
+				<div class="loginDrop">
+					<input id="Password" placeholder="Password" type="password">
+					<input onclick="login()" value="Login" type="button">
+				</div>
+			</div>
+		</div>
+		<div id="register" class="topBarButton">Register
+			<div id="registerMenu">
+				<div class="registerDrop">
+					<input id="RegUsername" placeholder="Username" type="text">
+				</div>
+				<div class="registerDrop">
+					<input id="RegPassword" placeholder="Password" type="password">
+					<input onclick="register()" value="Register" type="button">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<div id="center">
+			<p id="helpText"></p>
+			<script>
+				var para = document.createElement("p");
+				para.setAttribute("class", "text");
+				var node = document.createTextNode("Note: not all information is provided... there are secrets for you to find...");
+				para.appendChild(node);
+				var element = document.getElementById("helpText");
+				element.appendChild(para);
+			</script>
+		</div>
+		<div id="leftSidebar"></div>
+		<div id="rightSidebar">
+			<div style="width: 90%; position: relative; float:right">
+				<input type="button" class="navigate", onclick="help(0)" value="Valid Inputs"></input>
+				<input type="button" class="navigate", onclick="help(1)" value="Primary Actions"></input>
+				<input type="button" class="navigate", onclick="help(2)" value="Collectables"></input>
+				<input type="button" class="navigate", onclick="help(3)" value="Hunting"></input>
+				<input type="button" class="navigate", onclick="help(4)" value="Attacking"></input>
+				<input type="button" class="navigate", onclick="help(5)" value="Crafting"></input>
+				<input type="button" class="navigate", onclick="help(6)" value="Building"></input>
+				<input type="button" class="navigate", onclick="help(7)" value="Cooking"></input>
+				<input type="button" class="navigate", onclick="help(8)" value="Armor"></input>
+				<input type="button" class="navigate", onclick="help(9)" value="Smelting"></input>
+				<input type="button" class="navigate", onclick="help(10)" value="Syntax"></input>
+			</div>
+		</div>
+	</div>
+	<div id=""></div>
+</body>
+</html>

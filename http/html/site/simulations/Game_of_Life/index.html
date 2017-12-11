@@ -1,0 +1,165 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+		<script src="Game_of_Life.js"></script>
+		<script src="organization_and_grammar.js"></script>
+		<script>fooBack=[[],[],false]; fooCount=0; grid=true; notRunning=true; loadable=false;</script>
+		<link rel="shortcut icon" href="triaxi.gif">
+		<style>
+			#fooCounterDiv {
+				position: relative;
+				float: right;
+			}
+			#center {
+				overflow: scroll;
+			}
+			#MapBox {
+				background-color: #ffffff;
+				overflow: hidden;
+			}
+		</style>
+		<title>Game of Life</title>
+	<link rel="stylesheet" type="text/css" href="../../fileStorage/in_use/theme.css">
+</head>
+<body>
+	<div id="topBar">
+		<div id="title" class="topBarButton">Game of Life</div>
+		<div id="topButtons">
+			<a class="topBarButton" href="../../home/" style="font-weight:bold">Home</a>
+			<a class="topBarButton" href="../../aGreatAdventure/" style="font-weight:bold">A Great Adventure</a>
+			<a class="topBarButton" href="../../aGreatAdventure/help" target="_blank">Help</a>
+			<a class="topBarButton" href="../" style="font-weight:bold">Simulations</a>
+			<a class="topBarButton" href="../Game_of_Life/">Game of Life</a>
+			<a class="topBarButton" href="../Gravity/">Gravity</a>
+		</div>
+		<div id="login" class="topBarButton">Login
+			<div id="loginMenu">
+				<div class="loginDrop">
+					<input id="Username" placeholder="Username" type="text">
+				</div>
+				<div class="loginDrop">
+					<input id="Password" placeholder="Password" type="password">
+					<input onclick="login()" value="Login" type="button">
+				</div>
+			</div>
+		</div>
+		<div id="register" class="topBarButton">Register
+			<div id="registerMenu">
+				<div class="registerDrop">
+					<input id="RegUsername" placeholder="Username" type="text">
+				</div>
+				<div class="registerDrop">
+					<input id="RegPassword" placeholder="Password" type="password">
+					<input onclick="register()" value="Register" type="button">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<div id="center">
+			<div id="mapBox" style="width: 900px; height: 900px; border-width: 2px; border-style: solid;">
+				<canvas id="MapBox" width="900" height="900"></canvas>
+				<script>canvasSetup()</script>
+			</div>
+			<script>
+				setGrid(Math.floor(900/UCAsize));
+			</script>
+		</div>
+		<div id="leftSidebar">
+			<div id="buttons">
+				<script>
+					function start() {
+						if(notRunning) {
+							fooBack[0]=foo;
+							fooBack[2]=true;
+							fooCount=0;
+							notRunning=false;
+							bar=setInterval(lifer,1000*document.getElementById("box1").value)
+						}
+						if(loadable) {
+							loadable=false;
+							var element = document.getElementById("downloadButton");
+							element.parentNode.removeChild(element);
+						}
+					}
+				</script>										
+				<button type="button" onclick="start()">Start</button>
+				<input type="number" id="box1" placeholder="Interval" value="0.25"></input>
+				<button type="button" onclick="clearInterval(bar); notRunning=true;">Stop</button>
+				<p></p>
+				<script>
+					function noise() {
+						for(var i=0; i<900/UCAsize; i++) {for(var j=0; j<900/UCAsize; j++){ if(Math.random()<document.getElementById("box2").value) {foo[i][j]=true}}} showLife(foo);
+					}
+				</script>
+				<button type="button" onclick="noise()">Noise</button>
+				<input type="number" id="box2" placeholder="Added Density" value="0.3125"></input>
+				<p></p>
+				<script>
+					function clearMat() {
+						fooBack[1]=foo;
+						fooBack[2]=false;
+						foo=emptyProto();
+						showLife(foo);
+					}
+				</script>
+				<button type="button" onclick="clearMat()">Clear</button>
+				<script>
+					function reset() {
+						if(fooBack[2]) {
+							fooBack[1]=foo;
+							foo=fooBack[0];
+						}
+						else {
+							var fooTemp=foo;
+							foo=fooBack[1];
+							fooBack[1]=fooTemp;
+						}
+						fooBack[2]=false;
+						showLife(foo);
+					}
+				</script>
+				<button type="button" onclick="reset()">Reset</button>
+				<p></p>
+				<!--
+				<a href="#" id="downloadButton"><button type="button">Download Image</button></a>
+				<script>
+					function gridToggle() {
+						if(grid) {
+							grid=false;
+							paraFoo=document.getElementsByClassName("square");
+							for(var i=0; i<paraFoo.length; i++) {
+								paraFoo[i].setAttribute("style", "")
+							}
+							paraFoo=document.getElementById("mapBox");
+							paraFoo.setAttribute("style", "overflow-y: scroll; overflow-x: scroll; width: 900px; height: 900px; border-width: 2px; border-style: solid;")
+						}
+						else {
+							grid=true;
+							paraFoo=document.getElementsByClassName("square");
+							for(var i=0; i<paraFoo.length; i++) {
+								paraFoo[i].setAttribute("style", "border-width: 1px; border-style: solid; border-color: #888888")
+							}
+							paraFoo=document.getElementById("mapBox");
+							paraFoo.setAttribute("style", "overflow-y: scroll; overflow-x: scroll; width: 990px; height: 902px; border-width: 2px; border-style: solid;")
+						}
+					}
+				</script>
+				<button type="button" onclick="gridToggle()">Toggle Grid</button>-->
+				<button onclick="UCAsize=document.getElementById('sizeBox').value; setGrid(Math.floor(900/UCAsize)); showLife(foo)">Change Cell Size</button>
+				<input type="number" id="sizeBox" placeholder="Cell Size" value=20></input>
+				<p></p>
+				<button onclick="prepareDownload()">Prepare Download</button>
+			</div>
+		</div>
+		<div id="rightSidebar">
+			<div style="position: relative; float: right;">
+			Rounds:
+			<p></p>
+			<divCount id="fooCounterDiv"></divCount>
+			</div>
+		</div>
+	</div>
+	<div id=""></div>
+</body>
+</html>

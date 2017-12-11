@@ -1,0 +1,5 @@
+
+			<div>a(x)=<input type="text" id="JsMFunc1" placeholder="Function 1"></input></div>
+			<div>b(x)=<input type="text" id="JsMFunc2" placeholder="Function 2"></input></div>
+			<div>c(x)=<input type="text" id="JsMFunc3" placeholder="Function 3"></input></div>
+			<div>d(x)=<input type="text" id="JsMFunc4" placeholder="Function 4"></input></div>

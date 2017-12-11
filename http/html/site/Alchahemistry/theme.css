@@ -1,0 +1,151 @@
+
+		body {
+			background-color: #247EFC;
+		}
+		#topBar {
+			width: 100%;
+			position: absolute;
+			height: 50px;
+			background-color: #808080;
+			top: 0px;
+			left: 0px;
+			z-index: 1000;
+			padding: 0px;
+		}
+		#center {
+			position: absolute;
+			padding: 0px 0% 33% 1.67%;
+			width: 65%;
+			background-color: #C0FFD0;
+			top: 5%;
+			left: 16.67%;
+			z-index: 100;
+		}
+		#leftSidebar {
+			position: absolute;
+			height: 100%;
+			width: 16.67%;
+			background-color: #247EFC;
+			top: 5%;
+			left: 0%;
+			z-index: 0;
+			visibility: hidden;
+		}
+		#rightSidebar {
+			position: absolute;
+			height: 100%;
+			width: 16.67%;
+			background-color: #247EFC;
+			top: 5%;
+			left: 83.33%;
+			z-index: 0;
+			visibility: hidden;
+		}
+		#content {
+			width: 100%;
+			overflow: scroll;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-color: #247EFC;
+			background-image: url("images/background.png");
+			background-size: 100%;
+		}
+		#title {
+			width:16.67%;
+			float: left;
+			margin: 0px;
+			height: 100%;
+			padding: 0px;
+			text-align: center;
+			vertical-align: text-top;
+			color: black;
+			padding-top: 6px;
+			padding-left: 8px;
+			padding-bottom: 2px;
+		}
+		.topBarButton {
+			float: left;
+			margin: 0px;
+			height: 100%;
+			padding: 0px;
+			text-align: center;
+			vertical-align: text-top;
+			padding: 0% 8px;
+			-webkit-transition:color 0.35s ease-out, background 0.5s ease-in;
+			color: white;
+			text-decoration: none;
+		}
+		.topBarButton:after {
+			content: "";
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.topBarButton:hover {
+			background: white !important;
+			color: blue !important;
+		}
+		#topButtons {
+			width: 66.67%;
+			float: left;
+		}
+		#login {
+		    padding: 0% 8px;
+		    float: right;
+		    visibility: hidden;
+		}
+		#login:hover {
+			background: #808080;
+			color: white;
+		}
+		#loginMenu {
+		    text-decoration: none;
+		    color: white;
+		    font-size: 20px;
+		    display:inline-block;
+		    position: absolute;
+		    top: 100%;
+		    left: 83.33%;
+		    width: 16.66%;
+		    float: left;
+		    background-color: #808080;
+		    visibility: hidden;
+		    text-align: left;
+			padding: 2px;
+		}
+		#login:hover #loginMenu {
+			visibility: visible;
+		}
+		#register {
+		    padding: 0% 8px;
+		    float: right;
+		    visibility: hidden;
+		}
+		#register:hover {
+			background: #808080;
+			color: white;
+		}
+		#registerMenu {
+		    text-decoration: none;
+		    color: white;
+		    font-size: 20px;
+		    display:inline-block;
+		    position: absolute;
+		    top: 100%;
+		    left: 83.33%;
+		    width: 16.66%;
+		    float: left;
+		    background-color: #808080;
+		    visibility: hidden;
+		    text-align: left;
+			padding: 2px;
+		}
+		#register:hover #registerMenu {
+			visibility: visible;
+		}
+		img {
+			height: 40px;
+			float: left;
+		}

@@ -1,0 +1,71 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>A Great Adventure</title>
+	<link href="https://upload.wikimedia.org/wikipedia/commons/9/98/Farm-Fresh_tree.png" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="../fileStorage/in_use/theme.css">
+	<style>
+		.textBlock {
+			text-indent: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div id="topBar">
+		<div id="title" class="topBarButton">A Great Adventure</div>
+		<div id="topButtons">
+			<a class="topBarButton" href="../home/" style="font-weight:bold">Home</a>
+			<a class="topBarButton" href="../aGreatAdventure/" style="font-weight:bold">A Great Adventure</a>
+			<a class="topBarButton" href="../aGreatAdventure/help">Help</a>
+			<a class="topBarButton" href="../simulations/" style="font-weight:bold">Simulations</a>
+			<a class="topBarButton" href="../simulations/Game_of_Life/">Game of Life</a>
+			<a class="topBarButton" href="../simulations/Gravity/">Gravity</a>
+		</div>
+		<div id="login" class="topBarButton">Login
+			<div id="loginMenu">
+				<div class="loginDrop">
+					<input id="Username" placeholder="Username" type="text">
+				</div>
+				<div class="loginDrop">
+					<input id="Password" placeholder="Password" type="password">
+					<input onclick="login()" value="Login" type="button">
+				</div>
+			</div>
+		</div>
+		<div id="register" class="topBarButton">Register
+			<div id="registerMenu">
+				<div class="registerDrop">
+					<input id="RegUsername" placeholder="Username" type="text">
+				</div>
+				<div class="registerDrop">
+					<input id="RegPassword" placeholder="Password" type="password">
+					<input onclick="register()" value="Register" type="button">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<div id="center">
+			<p>Welcome to the site!</p>
+			<h2>Info</h2>
+			<div class="textBlock">This site was created primarily to put up various projects of mine the largest of which (that is a finished-ish form at least) is a text based game by the name of <a href="../aGreatAdventure/">A Great Adventure</a>. It is a text based survival/sandbox game with balancing issues. (The bears are too realistic in that you likely won't survive a hostile encounter and if you do you will probably finished off by the equally terrifying venomous snakes.)</div>
+			<div class="textBlock">Also on the site is a couple of simulations. <a href="../simulations/Game_of_Life/">Game of Life</a> is a "zero player" game where you set an initial state by activating or deactivating "cells" and then it progresses without influence. It was originally created by the mathematician <a href="https://en.wikipedia.org/wiki/John_Horton_Conway">John Horton Conway</a>. I recreated it here based on its simple rules:<p>1) cells with two adjacent active cells retain their state.</p><p>2) cells with three adjacent active cells are set to active.</p><p>3) all other cells are set to inactive.</p>The other simulation on the site is called <a href="../simulations/Gravity/">Gravity</a>. Basically it is a simulation of a gravitational system. You create bodies of certain sizes, masses, and starting velocities and allow them to move only dictated on the principles of gravity.</div>
+			<div class="textBlock">In addition on this site are a number of pages not realated to this main one. Alot of them incomplete or not very intresting to most people. However, for those interested, here are a list of them: <a href="../Alchahemistry/Home">Alchahemistry</a>, <a href="../rgb.html">rgb</a>, <a href="../Calculator">Calculator</a>, <a href="../keyboard">Keyboard</a>.</div>
+			<div class="textBlock"><p>I created this site with all the html/CSS/js learned from google searches. This means very little is done eficiently and I may be the only who thinks this style looks good.</p></div>
+			<h2>Site Map</h2>
+			<p style="text-indent:25px;">• <a href="../home/" style="font-weight:bold">Home</a>/<p>
+			<p style="text-indent:50px;">• <a href="../aGreatAdventure/" style="font-weight:bold">A Great Adventure</a></p>
+			<p style="text-indent:75px;">• <a href="../aGreatAdventure/help">Help</a></p>
+			<p style="text-indent:50px;">• <a href="../simulations/" style="font-weight:bold">Simulations</a></p>
+			<p style="text-indent:75px;">• <a href="../simulations/Game_of_Life/">Game of Life</a></p>
+			<p style="text-indent:75px;">• <a href="../simulations/Gravity/">Gravity</a></p>
+			<h2>Contact</h2>
+			<p>I would appreciate comments and suggestions on my site.</p>
+			<p>My preferred e-mail to be contacted at is agreatadventure42@gmail.com</p>
+		</div>
+		<div id="leftSidebar"></div>
+		<div id="rightSidebar"></div>
+	</div>
+	<div id=""></div>
+</body>
+</html>

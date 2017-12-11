@@ -1,0 +1,112 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+		<title>A Great Adventure</title>
+		<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/9/98/Farm-Fresh_tree.png">
+		<link rel="stylesheet" type="text/css" href="../fileStorage/in_use/theme.css">
+		<style>
+			#conversationBox {
+				height:66.67%;
+				width:90%;
+				border-width:0.4%;
+				border-style:inset;
+				position: relative;
+				background-image: none !important;
+				margin: 2.5%;
+			}
+			.boxContents {
+				position: absolute;
+				bottom: 0px;
+				width:99.4%;
+				border-style: outset;
+				border-width: 0.4%;
+				background-image: none !important;
+			}
+			#forText {
+				overflow:scroll;
+				width:100%;
+				height:96%;
+				background-image:url(../fileStorage/in_use/tree.png);
+				background-repeat:no-repeat;
+				background-position:center;
+				background-color:#cccccc;
+			}
+			#rightSidebar {
+				visibility: hidden;
+			}
+			#leftSidebar {
+				visibility: hidden;
+			}
+			#center {
+				height: 100%;
+			}
+			#content {
+				height: 100%;
+				overflow: hidden;
+			}
+		</style>
+		<script>
+			function candleManu27s(e) {
+				if(e.which==13||e.keyCode==13) {
+					inputHalt();
+				}
+			}
+		</script>
+</head>
+<body>
+	<div id="topBar">
+		<div id="title" class="topBarButton">A Great Adventure</div>
+		<div id="topButtons">
+			<a class="topBarButton" href="../home/" style="font-weight:bold">Home</a>
+			<a class="topBarButton" href="../aGreatAdventure/" style="font-weight:bold">A Great Adventure</a>
+			<a class="topBarButton" href="help" target="_blank">Help</a>
+			<a class="topBarButton" href="../simulations/" style="font-weight:bold">Simulations</a>
+			<a class="topBarButton" href="../simulations/Game_of_Life/">Game of Life</a>
+			<a class="topBarButton" href="../simulations/Gravity/">Gravity</a>
+		</div>
+		<div id="login" class="topBarButton">Login
+			<div id="loginMenu">
+				<div class="loginDrop">
+					<input id="Username" placeholder="Username" type="text">
+				</div>
+				<div class="loginDrop">
+					<input id="Password" placeholder="Password" type="password">
+					<input onclick="login()" value="Login" type="button">
+				</div>
+			</div>
+		</div>
+		<div id="register" class="topBarButton">Register
+			<div id="registerMenu">
+				<div class="registerDrop">
+					<input id="RegUsername" placeholder="Username" type="text">
+				</div>
+				<div class="registerDrop">
+					<input id="RegPassword" placeholder="Password" type="password">
+					<input onclick="register()" value="Register" type="button">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<div id="center">
+			<div id="conversationBox">
+				<div id="forText">
+					<p class="text">Enter "Start" to begin.</p>
+				</div>
+				<div class="boxContents">
+					<input type="text" id="inputBox" style="width:90%; height:20px;" onkeypress="return candleManu27s(event)">
+					<input type="button" onclick="inputHalt()" style="width:10%; background-color: #888888; height:20px; left:90%; bottom:0px; position: absolute;" value="Enter">
+				</div>
+			</div>
+		</div>
+		<div id="leftSidebar">
+			<div id="leftHolder">
+				<div id="scriptHolder"></div>
+				<script src="../fileStorage/in_use/aGreatAdventure/scriptLoader.js"></script>
+			</div>
+		</div>
+		<div id="rightSidebar"></div>
+	</div>
+	<div id=""></div>
+</body>
+</html>

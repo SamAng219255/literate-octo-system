@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<header> <title></title>
+<style>
+	body {
+		margin: 0px;
+	}
+	table {
+		border-collapse:collapse;
+		border-color: #e0e0e0;
+		border-width: 2px;
+	}
+	th {
+		text-align: left;
+		border-width: 2px;
+		border-color: #e0e0e0 #e0e0e0 #c0c0c0;
+		background-color: #b0d0f0;
+	}
+	td {
+		text-align: center;
+		border-width: 0px 2px;
+		border-color: #e0e0e0;
+		padding: 2px;
+	}
+	table, th, td {
+		border-style: solid;
+	}
+	tr:nth-child(even) {
+		background-color: #c0e0ff;
+	}
+</style>
+<script>limitMod=4; limit=Math.pow(2,4*limitMod)</script>
+</header>
+<body>
+	<input type="number" id="searchNum" placeholder="Decimal Value" onchange="change()"><a id="searchA" href=""><input type="button" value="Search"></a>
+	<table id="hexTable">
+		<tr>
+			<th>DEC</th>
+			<th>HEX</th>
+			<th>BIN</th>
+		</tr>
+	</table>
+	<script>
+		function change() {
+			document.getElementById("searchA").href=document.location.href.split("#")[0]+"#"+document.getElementById("searchNum").value;
+		}
+		String.prototype.insert = function (index,str) {
+			var temp=this.split("");
+			temp.splice(index,0,str);
+			var temp2="";
+			for(var i=0; i<temp.length; i++) {
+				temp2+=temp[i];
+		    }
+			return temp2;
+		}
+		function lengthen(str,len) {
+			var temp=str;
+			while(temp.length<len) {
+				temp="0"+temp;
+			}
+			if(len>4) {
+				for(var i=len; i>0; i-=4) {
+					temp=temp.insert(i," ");
+				}
+			}
+			return temp;
+		}
+		var temp="<tbody><tr><th>DEC</th><th>HEX</th><th>BIN</th></tr>"
+		for(var i=0; i<limit; i++) {
+			temp+="<tr>\n<td><a name=\""+i+"\">"+i+"</a></td>\n<td>"+lengthen(i.toString(16).toUpperCase(),limitMod)+"</td>\n<td>"+lengthen(i.toString(2),limitMod*4)+"</td>\n</tr>\n";
+		}
+		temp+="</tbody>";
+		document.getElementById("hexTable").innerHTML=temp;
+	</script>
+</body>
+</html>

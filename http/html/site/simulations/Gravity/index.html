@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+		<link href="Planet.png" rel="shortcut icon">
+		<title>Gravity</title>	
+		<script src="Gravity.js"></script>
+		<style>
+			body {
+				background-color: #7E12FC;
+			}
+			#viewPort {
+				background-color: #000000;
+				float: left;
+			}
+			#controlPanel {
+				background-color: #888888;
+				width: 400;
+				height: 500;
+				float: left;
+				position: relative;
+				overflow-x: hidden; 
+				overflow-y: scroll;
+			}
+			#controllers {
+				padding: 10px;
+			}
+			#log {
+				background-color: #CCCCCC;
+				height: 33%; 
+				width: 80%;
+				margin: 5%;
+				overflow: scroll;
+				position: relative;
+				float: right;
+			}
+			.bars {
+				height: 100%;
+				width: 33.33%;
+				float: left;
+			}
+			#stillHold {
+				position: relative;
+				margin: 5%;
+				float: right;
+				width: 80%;
+			}
+		</style>
+	<link rel="stylesheet" type="text/css" href="../../fileStorage/in_use/theme.css">
+</head>
+<body onload="draw()">
+	<div id="topBar">
+		<div id="title" class="topBarButton">Gravity</div>
+		<div id="topButtons">
+			<a class="topBarButton" href="../../home/" style="font-weight:bold">Home</a>
+			<a class="topBarButton" href="../../aGreatAdventure/" style="font-weight:bold">A Great Adventure</a>
+			<a class="topBarButton" href="../../aGreatAdventure/help" target="_blank">Help</a>
+			<a class="topBarButton" href="../" style="font-weight:bold">Simulations</a>
+			<a class="topBarButton" href="../Game_of_Life/">Game of Life</a>
+			<a class="topBarButton" href="../Gravity/">Gravity</a>
+		</div>
+		<div id="login" class="topBarButton">Login
+			<div id="loginMenu">
+				<div class="loginDrop">
+					<input id="Username" placeholder="Username" type="text">
+				</div>
+				<div class="loginDrop">
+					<input id="Password" placeholder="Password" type="password">
+					<input onclick="login()" value="Login" type="button">
+				</div>
+			</div>
+		</div>
+		<div id="register" class="topBarButton">Register
+			<div id="registerMenu">
+				<div class="registerDrop">
+					<input id="RegUsername" placeholder="Username" type="text">
+				</div>
+				<div class="registerDrop">
+					<input id="RegPassword" placeholder="Password" type="password">
+					<input onclick="register()" value="Register" type="button">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<div id="center">
+			<canvas id="viewPort" width="500" height="500" onkeydown="return keyPressed(event)"></canvas>
+		</div>
+		<div id="leftSidebar">
+			<div id="controllers">
+				<p><input type="text" placeholder="name" id="orbiterName"></p>
+				<p><input type="number" placeholder="mass" id="mass"></p>
+				<p><input type="number" placeholder="radius" id="radius"></p>
+				<p><input type="number" placeholder="x position" id="xPos"></p>
+				<p><input type="number" placeholder="y position" id="yPos"></p>
+				<p><input type="number" placeholder="x velocity" id="xVel"></p>
+				<p><input type="number" placeholder="y velocity" id="yVel"></p>
+				<p><input type="text" placeholder="color" id="color"></p>
+				<p>
+					<input type="button" value="Create Object" onclick="createOrbiter()">
+					<input type="button" value="Remove Object" onclick="removeOrbiterKey()">
+					<div>Remove Object will remove an object with the name in the first box.</div>
+				</p>
+				<p><input type="button" value="Start" onclick="startOrbits()"><input type="button" value="Stop" onclick="stopOrbits()"></p>
+				<p style="color: #247EFC;">If you can read this, either you highlighted it or it's broken.</p>
+				<p><input type="button" value="Zoom Out" onclick="zoomOut()"><input type="button" value="Zoom In" onclick="zoomIn()"></p>
+			</div>
+		</div>
+		<div id="rightSidebar">
+			<div id="log">
+				
+			</div>
+			<div id="stillHold">
+			<input type="checkbox" id="still">Check while creating object to prevent it from moving.
+			<p><input type="text" placeholder="output" style="width: 100px;" id="output"></p>
+			<p><input type="button" value="output" style="width: 100px;" onclick="outputGrav()"></p>
+			<p><input type="text" placeholder="input" style="width: 100px;" id="input"></p>
+			<p><input type="button" value="input" style="width: 100px;" onclick="inputGrav()"></p>
+			</div>
+		</div>
+	</div>
+	<div id=""></div>
+</body>
+</html>

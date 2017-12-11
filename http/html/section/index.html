@@ -1,0 +1,116 @@
+<head>
+	<meta charset="utf-8"/>
+	<title>Linux Commands A-Z</title>
+	<link href="../../img/icon.png" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="../../theme.css">
+	<style>
+		#topbar {
+			position:sticky;
+			top:0;
+			width:100%;
+			z-index:1;
+			background-color: #202028;
+		}
+		section {
+			margin-top:-70px;
+			padding-top:70px;
+			padding-left:5px
+		}
+		table {
+			border-collapse:collapse;
+			border-color: #303038;
+			border-width: 2px;
+		}
+		th {
+			text-align: left;
+			border-width: 2px;
+			border-color: #303038 #303038 #282830;
+			background-color: #101018;
+		}
+		td {
+			text-align: center;
+			border-width: 0px 2px;
+			border-color: #303038;
+			padding: 2px;
+		}
+		table, th, td {
+			border-style: solid;
+		}
+		tr:nth-child(even) {
+			background-color: #202028;
+		}
+	</style>
+</head>
+<body>
+	<div id="topBar"><div id="name">Interverse</div><div id="navigationButtons"></div></div>
+	<script>
+		function fadeBars() {
+			var navBars=document.getElementsByClassName("navButton");
+			var bottomFadeBars=document.getElementsByClassName("bottomFadeBar");
+			var topFadeBars=document.getElementsByClassName("topFadeBar");
+			for(var i=0; i<navBars.length; i++) {
+				bottomFadeBars[i].style="width: "+(navBars[i].offsetWidth-4)+";";
+				topFadeBars[i].style="width: "+(navBars[i].offsetWidth-4)+";";
+			}
+		}
+	</script>
+	<section id="top">
+		<div>
+		A-Z List of Linux Commands<br />
+		<br />
+		Some or many of these commands may not work on your distribution. Running those commands may require you to install additional packages or it’s just that the commands aren’t meant to work on your system.<br />
+		<br />
+		The descriptions of these Linux commands are based on their manual pages. To access the man page:<br />
+		<br />
+		man command_name<br />
+		<br />
+		For eg: man cat<br />
+		<br />
+		If you find any discrepancy, please feel free to contact for any correction.<br />
+		<br />
+		</div>
+	</section>
+	<div id="table"></div>
+	<script>
+		function cmdtable(txt) {
+			var sectionplace=0
+			var lastchar=""
+			var text=txt.split("\n")
+			var temp=""
+			var links="<div class=\"topFullFadeBar\"></div><div class=\"bottomFullFadeBar\"></div><a class=\"navButHolder\" href=\"#top\"><div class=\"navButton\"><div class=\"topFadeBar\"></div><div class=\"bottomFadeBar\"></div><div class=\"navTxt\">Back to Top</div></div></a>"
+			for(var i=0; i<text.length; i++) {
+				if(text[i]!="") {
+					if(lastchar!=text[i].split("")[0].toLowerCase()) {
+						lastchar=text[i].split("")[0].toLowerCase();
+						if(sectionplace>0){
+							temp+="</table></section><br />";
+						}
+						if(sectionplace<=26){
+							temp+="<section id=\""+lastchar.toUpperCase()+"\"><h4>"+lastchar.toUpperCase()+"</h4><table><tr><th>command</th><th>description</th></tr>";
+						}
+						links+="<a class=\"navButHolder\" href=\"#"+lastchar.toUpperCase()+"\"><div class=\"navButton\"><div class=\"topFadeBar\"></div><div class=\"bottomFadeBar\"></div><div class=\"navTxt\">"+lastchar.toUpperCase()+"</div></div></a>"
+						sectionplace++
+					}
+					var phrase=""
+					for(var j=1; j<text[i].split(" ").length; j++) {
+						if(text[i].split(" ")[j]!="") {
+							phrase+=text[i].split(" ")[j]+" "
+						}
+					}
+					temp+="<tr><td>"+text[i].split(" ")[0]+"</td><td>"+phrase+"</td></tr>";
+				}
+			}
+			document.getElementById("table").innerHTML=temp
+			document.getElementById("navigationButtons").innerHTML=links
+			fadeBars()
+		}
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				cmdtable(this.responseText);
+			}
+		};
+		xhttp.open("GET", "text.txt", true);
+		xhttp.send();
+	</script>
+</body>

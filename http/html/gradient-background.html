@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<style>
+			body {
+				margin:0px;
+				background-color: #202020;
+				background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,255)), linear-gradient(#f00, #880, #0f0, #088, #00f, #808, #f00);
+				background-size: 100%, 100%;
+			}
+			#cover {
+				position:absolute;
+				width:100%;
+				height:100%;
+				background-color:#000000;
+			}
+		</style>
+		<script>
+			function coverColour() {
+				document.getElementById("cover").style="opacity:"+(Math.pow(Math.sin(((new Date).getTime()/1000)%(2*Math.PI)),2))+";";
+			}
+			setInterval(coverColour,1);
+		</script>
+	</head>
+	<body>
+		<div id="cover"></div>
+	</body>
+</html>

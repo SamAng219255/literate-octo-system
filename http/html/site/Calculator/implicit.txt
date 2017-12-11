@@ -1,0 +1,8 @@
+
+			<div>Implicit Javascript Math Functions:</div>
+			<div><input type="text" id="JsMFunc1" placeholder="Function 1">=</input><input type="text" id="JsMFunc1b" placeholder="Function 1"></input></div>
+			<div><input type="text" id="JsMFunc2" placeholder="Function 2">=</input><input type="text" id="JsMFunc2b" placeholder="Function 2"></input></div>
+			<div><input type="text" id="JsMFunc3" placeholder="Function 3">=</input><input type="text" id="JsMFunc3b" placeholder="Function 3"></input></div>
+			<div><input type="text" id="JsMFunc4" placeholder="Function 4">=</input><input type="text" id="JsMFunc4b" placeholder="Function 4"></input></div>
+		
+	
