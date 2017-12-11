@@ -1,0 +1,237 @@
+a {
+	color: #40f0c0;
+	text-decoration: none;
+}
+a:hover {
+	color: #40f0c0;
+	text-decoration: none;
+}
+a:active {
+	color: #40f0c0;
+	text-decoration: none;
+}
+body {
+	margin: 0px;
+	background-color: #000008;
+	overflow-x: hidden;
+	color: #40f0c0;
+	overflow-y: auto;
+}
+p {
+	width: 96%;
+	margin: 10px 2%;
+}
+#topBar {
+	width: 100%;
+	height: 70px;
+	background-color: #202028;
+}
+#name {
+	margin-left: 10px;
+	width: 100%;
+	height: 37px;
+	font-size: 30px;
+	color: #00c080;
+}
+#navigationButtons {
+	width: 100%;
+	height: 29px;
+	padding: 0px 10%;
+	border-style: solid none;
+	border-width: 2px;
+	border-color: #202028;
+	border-collapse: collapse;
+}
+.navButton {
+	height: 29px;
+	padding: 0px;
+	position: relative;
+	cursor: pointer;
+	float: left;
+	margin: 0;
+	border-style: solid;
+	border-width: 0px 2px;
+	border-color: #202028;
+	background-color: #202028;
+}
+.navButHolder {
+}
+.bottomFadeBar {
+	position: absolute;
+	bottom: 0px;
+	height: 13px;
+	
+    background: #202028;
+    background: -webkit-linear-gradient(rgba(0,0,0,0), #101018);
+    background: -o-linear-gradient(rgba(0,0,0,0), #101018);
+    background: -moz-linear-gradient(rgba(0,0,0,0), #101018);
+    background: linear-gradient(rgba(0,0,0,0), #101018);
+}
+.topFadeBar {
+	position: absolute;
+	top: 0px;
+	height: 13px;
+	
+    background: #202028;
+    background: -webkit-linear-gradient(#303038, rgba(0,0,0,0));
+    background: -o-linear-gradient(#303038, rgba(0,0,0,0));
+    background: -moz-linear-gradient(#303038, rgba(0,0,0,0));
+    background: linear-gradient(#303038, rgba(0,0,0,0));
+}
+.bottomFullFadeBar {
+	position: absolute;
+	top: 55px;
+	left: 0px;
+	width: 100%;
+	height: 13px;
+	
+    background: #202020;
+    background: -webkit-linear-gradient(rgba(0,0,0,0), #101018);
+    background: -o-linear-gradient(rgba(0,0,0,0), #101018);
+    background: -moz-linear-gradient(rgba(0,0,0,0), #101018);
+    background: linear-gradient(rgba(0,0,0,0), #101018);
+}
+.topFullFadeBar {
+	position: absolute;
+	top: 39px;
+	left: 0px;
+	width: 100%;
+	height: 13px;
+	
+    background: #202028;
+    background: -webkit-linear-gradient(#303038, rgba(0,0,0,0));
+    background: -o-linear-gradient(#303038, rgba(0,0,0,0));
+    background: -moz-linear-gradient(#303038, rgba(0,0,0,0));
+    background: linear-gradient(#303038, rgba(0,0,0,0));
+}
+.navButton:hover {
+	background: #404048;
+}
+.navButton:hover .bottomFadeBar {
+    background: #404048;
+    background: -webkit-linear-gradient(rgba(0,0,0,0), #202028);
+    background: -o-linear-gradient(rgba(0,0,0,0), #202028);
+    background: -moz-linear-gradient(rgba(0,0,0,0), #202028);
+    background: linear-gradient(rgba(0,0,0,0), #202028);
+}
+.navButton:hover .topFadeBar {
+    background: #404048;
+    background: -webkit-linear-gradient(#606068, rgba(0,0,0,0));
+    background: -o-linear-gradient(#606068, rgba(0,0,0,0));
+    background: -moz-linear-gradient(#606068, rgba(0,0,0,0));
+    background: linear-gradient(#606068, rgba(0,0,0,0));
+}
+.navButton:active {
+	background-color: #202028;
+}
+.navButton:active .bottomFadeBar {
+    background: #202028;
+    background: -webkit-linear-gradient(rgba(0,0,0,0), #303038);
+    background: -o-linear-gradient(rgba(0,0,0,0), #303038);
+    background: -moz-linear-gradient(rgba(0,0,0,0), #303038);
+    background: linear-gradient(rgba(0,0,0,0), #303038);
+}
+.navButton:active .topFadeBar {
+    background: #202028;
+    background: -webkit-linear-gradient(#101018, rgba(0,0,0,0));
+    background: -o-linear-gradient(#101018, rgba(0,0,0,0));
+    background: -moz-linear-gradient(#101018, rgba(0,0,0,0));
+    background: linear-gradient(#101018, rgba(0,0,0,0));
+}
+.navTxt {
+	position: relative;
+	z-index: 100;
+	text-align: center;
+	height: 29px;
+	line-height: 29px;
+	margin: 0px 2px;
+}
+#content {
+	position: relative;
+	padding: 0px;
+	float: left;
+	overflow: clip;
+	width: 80%;
+}
+#leftSideBar {
+	position: relative;
+	float: left;
+	width: 10%;
+	height: 100%;
+	background-color: #101018;
+}
+#rightSideBar {
+	position: relative;
+	float: right;
+	width: 10%;
+	height: 100%;
+	background-color: #101018;
+}
+::selection {
+	color: #202028;
+	background: #40F0C0;
+}
+::-moz-selection {
+	color: #202028;
+	background: #40F0C0;
+}
+
+.halloween {
+	color: #ff8000;
+	background: #000000;
+	text-align: center;
+	margin: auto;
+}
+.halloween::selection {
+	color: #000000;
+	background: #ff8000;
+}
+.Thanksgiving {
+	color: #D2B48C;
+	background: #000000;
+	text-align: center;
+	margin: auto;
+}
+.Thanksgiving::selection {
+	color: #000000;
+	background: #D2B48C;
+}
+.Thanksgiving::-moz-selection {
+	color: #000000;
+	background: #D2B48C;
+}
+#tree {
+	background: #000000;
+	text-align: center;
+	margin: auto;
+}
+.brown{color:#4F3527}
+.black{color:#000000}
+.red{color:#ff0000;}
+.green{color:#00ff00}
+.yellow{color:#ffff00}
+.blue{color:#0000ff}
+.magenta{color:#ff00ff}
+.cyan{color:#00ffff}
+.white{color:#ffffff}
+color{white-space:pre;font-family:monospace;background-color:#000000}
+.brown::-moz-selection{background-color:#4F3527}
+.black::-moz-selection{background-color:#000000}
+.red::-moz-selection{background-color:#ff0000;}
+.green::-moz-selection{background-color:#00ff00}
+.yellow::-moz-selection{background-color:#ffff00}
+.blue::-moz-selection{background-color:#0000ff}
+.magenta::-moz-selection{background-color:#ff00ff}
+.cyan::-moz-selection{background-color:#00ffff}
+.white::-moz-selection{background-color:#ffffff}
+color::-moz-selection{white-space:pre;font-family:monospace;color:#000000}
+.brown::selection{background-color:#9E6A4E}
+.black::selection{background-color:#000000}
+.red::selection{background-color:#ff0000;}
+.green::selection{background-color:#00ff00}
+.yellow::selection{background-color:#ffff00}
+.blue::selection{background-color:#0000ff}
+.magenta::selection{background-color:#ff00ff}
+.cyan::selection{background-color:#00ffff}
+.white::selection{background-color:#ffffff}
+color::selection{white-space:pre;font-family:monospace;color:#000000}

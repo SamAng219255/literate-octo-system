@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>Interverse</title>
+	<link rel="stylesheet" type="text/css" href="theme.css">
+	<link href="./img/icon.png" rel="shortcut icon">
+	<script src="./halloween.js"></script>
+</head>
+<body>
+	<div id="topBar">
+		<div id="name">Interverse</div>
+		<div id="navigationButtons">
+			<div class="topFullFadeBar"></div><div class="bottomFullFadeBar"></div>
+			<a class="navButHolder" href="html/"><div class="navButton"><div class="topFadeBar"></div><div class="bottomFadeBar"></div><div class="navTxt">HTML</div></div></a>
+			<a class="navButHolder" href="python/"><div class="navButton"><div class="topFadeBar"></div><div class="bottomFadeBar"></div><div class="navTxt">Python</div></div></a>
+			<a class="navButHolder" href="logs/"><div class="navButton"><div class="topFadeBar"></div><div class="bottomFadeBar"></div><div class="navTxt">Logs</div></div></a>
+			<a class="navButHolder" href="https://github.com/SamAng219255"><div class="navButton"><div class="topFadeBar"></div><div class="bottomFadeBar"></div><div class="navTxt">Github</div></div></a>
+			<a class="navButHolder" href="html/site/"><div class="navButton"><div class="topFadeBar"></div><div class="bottomFadeBar"></div><div class="navTxt">Other Site Clone</div></div></a>
+			<a class="navButHolder" href="foo/"><div class="navButton"><div class="topFadeBar"></div><div class="bottomFadeBar"></div><div class="navTxt">php</div></div></a>
+			<a class="navButHolder" href="<a class="navButHolder" href="foo/"><div class="navButton"><div class="topFadeBar"></div><div class="bottomFadeBar"></div><div class="navTxt">php</div></div></a>"><div class="navButton"><div class="topFadeBar"></div><div class="bottomFadeBar"></div><div class="navTxt">Pico</div></div></a>
+			<script>
+				var navBars=document.getElementsByClassName("navButton");
+				var bottomFadeBars=document.getElementsByClassName("bottomFadeBar");
+				var topFadeBars=document.getElementsByClassName("topFadeBar");
+				for(var i=0; i<navBars.length; i++) {
+					bottomFadeBars[i].style="width: "+(navBars[i].offsetWidth-4)+";";
+					topFadeBars[i].style="width: "+(navBars[i].offsetWidth-4)+";";
+				}
+			</script>
+		</div>
+	</div>
+	<div id="leftSideBar"></div>
+	<div id="content">
+		<p>I don't know what to put here now...</p>
+		<div><pre id="turkey" class="Thanksgiving" onmouseover="" onmouseout="" style="width: 261px;">
+                                                       
+                             ,+*^^*+___+++_            
+                       ,*^^^^              )           
+                    _+*                     ^**+_      
+                  +^       _ _++*+_+++_,         )     
+     _+^^*+_    (     ,+*^ ^          \+_        )     
+    {       )  (    ,(    ,_+--+--,      ^)      ^\    
+   { (@)    } f   ,(  ,+-^ __*_*_  ^^\_   ^\       )   
+  {:;-/    (_+*-+^^^^^+*+*<_ _++_)_    )    )      /   
+ ( /  (    (        ,___    ^*+_+* )   <    <      \   
+  U _/     )    *--<  ) ^\-----++__)   )    )       )  
+    (      )  _(^)^^))  )  )\^^^^^))^*+/    /       /  
+  (     /  (_))_^)) )  )  ))^^^^^))^^^)__/     +^^     
+ (     ,/    (^))^))  )  ) ))^^^^^^^))^^)       _)     
+  *+__+*       (_))^)  ) ) ))^^^^^^))^^^^^)____*^      
+  \             \_)^)_)) ))^^^^^^^^^^))^^^^)           
+   (_             ^\__^^^^^^^^^^^^))^^^^^^^)           
+     ^\___            ^\__^^^^^^))^^^^^^^^)\\          
+          ^^^^^\uuu/^^\uuu/^^^^\^\^\^\^\^\^\^\         
+             ___) >____) >___   ^\_\_\_\_\_\_\)        
+            ^^^//\\_^^//\\_^       ^(\_\_\_\)          
+              ^^^ ^^ ^^^ ^                             
+                                                        </pre></div>
+	</div>
+	<div id="rightSideBar"></div>
+</body>
+</html>

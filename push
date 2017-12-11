@@ -1,9 +1,10 @@
-cp -r /home/sam/http ./
-rm html
-rm python
-rm MUD
-rm logs
-rm -r foo
+cp -r /home/sam/http /home/sam/repo/literate-octo-system/http/
+rm /home/sam/repo/literate-octo-system/http/html
+rm/home/sam/repo/literate-octo-system/ http/python
+rm /home/sam/repo/literate-octo-system/http/MUD
+rm /home/sam/repo/literate-octo-system/http/logs
+rm -r /home/sam/repo/literate-octo-system/http/foo
+cp -r /home/sam/html /home/sam/repo/literate-octo-system/http/
 git add --all
 git commit -m "updated"
 git push
