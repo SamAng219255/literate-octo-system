@@ -15,7 +15,7 @@ function coloring() {
 	var total="";
 	for(var i=0; i<temp2.length; i++) {
 		var light="^";
-		if(Math.random()>0.5) {
+		if(Math.random()>0.25) {
 			light="*";
 		}
 		if(i>0) {

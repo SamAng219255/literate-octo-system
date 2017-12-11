@@ -1,0 +1,9 @@
+cp -r /home/sam/http ./
+rm html
+rm python
+rm MUD
+rm logs
+rm -r foo
+git add --all
+git commit -m "updated"
+git push
