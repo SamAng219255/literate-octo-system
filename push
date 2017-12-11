@@ -1,6 +1,6 @@
 cp -r /home/sam/http /home/sam/repo/literate-octo-system/
 rm /home/sam/repo/literate-octo-system/http/html
-rm/home/sam/repo/literate-octo-system/ http/python
+rm /home/sam/repo/literate-octo-system/http/python
 rm /home/sam/repo/literate-octo-system/http/MUD
 rm /home/sam/repo/literate-octo-system/http/logs
 rm -r /home/sam/repo/literate-octo-system/http/foo
