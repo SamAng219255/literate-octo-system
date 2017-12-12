@@ -1,3 +1,26 @@
+class thuemorse {
+	constructor() {
+		this.values=[false]
+		this.place=0
+		this.iteration=0
+		this.newValue=function () {
+			if(this.place<Math.pow(2,this.iteration)) {
+				this.place++
+				this.values.push(!this.values[this.place])
+				return !this.values[this.place]
+			}
+			else {
+				this.iteration++
+				this.place=0
+				this.values.push(!this.values[this.place])
+				return !this.values[this.place]
+			}
+		}
+	}
+}
+
+
+seq=new thuemorse()
 function colortree() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -15,7 +38,7 @@ function coloring() {
 	var total="";
 	for(var i=0; i<temp2.length; i++) {
 		var light="^";
-		if(Math.random()>0.25) {
+		if(seq.newValue()) {
 			light="*";
 		}
 		if(i>0) {
