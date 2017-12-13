@@ -82,20 +82,20 @@ ___________|___|__________|
                           |   
             </color><color class="green">/\</color><color class="brown">            |   
            </color><color class="green">/ </color><color class="white">^</color><color class="green">\</color><color class="brown">           |   
-          </color><color class="green">/</color><color class="red">O</color><color class="green">   \</color><color class="brown">          |   
+          </color><color class="green">/</color><color class="red">O</color><color class="green"> </color><color class="white">^</color><color class="green"> \</color><color class="brown">          |   
          </color><color class="green">/ </color><color class="white">^</color><color class="green"> </color><color class="yellow">===</color><color class="green">\</color><color class="brown">         |   
         </color><color class="green">/</color><color class="yellow">====</color><color class="green"> </color><color class="red">O</color><color class="green">  \</color><color class="brown">        |   
        </color><color class="green">/__________\</color><color class="brown">           
          </color><color class="green">/  </color><color class="white">^</color><color class="green">   \</color><color class="brown">             
         </color><color class="green">/  </color><color class="red">O</color><color class="green">  </color><color class="white">^</color><color class="green">  \</color><color class="brown">            
        </color><color class="green">/</color><color class="red">O</color><color class="green">     </color><color class="yellow">====</color><color class="green">\</color><color class="brown">           
-      </color><color class="green">/   </color><color class="yellow">====</color><color class="green">  </color><color class="white">^</color><color class="green">  \</color><color class="brown">     ___  
+      </color><color class="green">/ </color><color class="white">^</color><color class="green"> </color><color class="yellow">====</color><color class="green">  </color><color class="white">^</color><color class="green">  \</color><color class="brown">     ___  
      </color><color class="green">/</color><color class="yellow">====</color><color class="green">  </color><color class="white">^</color><color class="green">   </color><color class="red">O</color><color class="green">   \</color><color class="brown">     |   
     </color><color class="green">/________________\</color><color class="brown">    |   
       </color><color class="green">/  </color><color class="red">O</color><color class="green">  </color><color class="white">^</color><color class="green">  </color><color class="white">^</color><color class="green">   \</color><color class="brown">      |   
      </color><color class="green">/    </color><color class="white">^</color><color class="green"> </color><color class="red">O</color><color class="green">   </color><color class="yellow">====</color><color class="green">\</color><color class="brown">     |   
-    </color><color class="green">/  </color><color class="red">O</color><color class="green">    </color><color class="yellow">====</color><color class="green">     \</color><color class="brown">    |   
-   </color><color class="green">/  </color><color class="white">^</color><color class="green"> </color><color class="yellow">====</color><color class="green"> </color><color class="white">^</color><color class="green">    </color><color class="red">O</color><color class="green">   \</color><color class="brown">   |   
+    </color><color class="green">/  </color><color class="red">O</color><color class="green">    </color><color class="yellow">====</color><color class="green">  </color><color class="white">^</color><color class="green">  \</color><color class="brown">    |   
+   </color><color class="green">/  </color><color class="white">^</color><color class="green"> </color><color class="yellow">====</color><color class="green"> </color><color class="white">^</color><color class="green">    </color><color class="red">O</color><color class="green"> </color><color class="white">^</color><color class="green"> \</color><color class="brown">   |   
   </color><color class="green">/</color><color class="yellow">=====</color><color class="green">   </color><color class="red">O</color><color class="green">   </color><color class="red">O</color><color class="green">  </color><color class="white">^</color><color class="green">    \</color><color class="brown">  |   
  </color><color class="green">/______________________\</color><color class="brown"> |   
            |   |          |   
@@ -108,20 +108,20 @@ ___________|___|__________|
           </color><color class="yellow">&lt;    &gt;</color><color class="brown">          |   
            </color><color class="yellow">|/\|</color><color class="brown">           |   
            </color><color class="green">/ </color><color class="white">^</color><color class="green">\</color><color class="brown">           |   
-          </color><color class="green">/</color><color class="red">O</color><color class="green">   \</color><color class="brown">          |   
+          </color><color class="green">/</color><color class="red">O</color><color class="green"> </color><color class="white">^</color><color class="green"> \</color><color class="brown">          |   
          </color><color class="green">/ </color><color class="white">^</color><color class="green"> </color><color class="yellow">===</color><color class="green">\</color><color class="brown">         |   
         </color><color class="green">/</color><color class="yellow">====</color><color class="green"> </color><color class="red">O</color><color class="green">  \</color><color class="brown">        |   
        </color><color class="green">/__________\</color><color class="brown">           
          </color><color class="green">/  </color><color class="white">^</color><color class="green">   \</color><color class="brown">             
         </color><color class="green">/  </color><color class="red">O</color><color class="green">  </color><color class="white">^</color><color class="green">  \</color><color class="brown">            
        </color><color class="green">/</color><color class="red">O</color><color class="green">     </color><color class="yellow">====</color><color class="green">\</color><color class="brown">           
-      </color><color class="green">/   </color><color class="yellow">====</color><color class="green">  </color><color class="white">^</color><color class="green">  \</color><color class="brown">     ___  
+      </color><color class="green">/ </color><color class="white">^</color><color class="green"> </color><color class="yellow">====</color><color class="green">  </color><color class="white">^</color><color class="green">  \</color><color class="brown">     ___  
      </color><color class="green">/</color><color class="yellow">====</color><color class="green">  </color><color class="white">^</color><color class="green">   </color><color class="red">O</color><color class="green">   \</color><color class="brown">     |   
     </color><color class="green">/________________\</color><color class="brown">    |   
       </color><color class="green">/  </color><color class="red">O</color><color class="green">  </color><color class="white">^</color><color class="green">  </color><color class="white">^</color><color class="green">   \</color><color class="brown">      |   
      </color><color class="green">/    </color><color class="white">^</color><color class="green"> </color><color class="red">O</color><color class="green">   </color><color class="yellow">====</color><color class="green">\</color><color class="brown">     |   
-    </color><color class="green">/  </color><color class="red">O</color><color class="green">    </color><color class="yellow">====</color><color class="green">     \</color><color class="brown">    |   
-   </color><color class="green">/  </color><color class="white">^</color><color class="green"> </color><color class="yellow">====</color><color class="green"> </color><color class="white">^</color><color class="green">    </color><color class="red">O</color><color class="green">   \</color><color class="brown">   |   
+    </color><color class="green">/  </color><color class="red">O</color><color class="green">    </color><color class="yellow">====</color><color class="green">  </color><color class="white">^</color><color class="green">  \</color><color class="brown">    |   
+   </color><color class="green">/  </color><color class="white">^</color><color class="green"> </color><color class="yellow">====</color><color class="green"> </color><color class="white">^</color><color class="green">    </color><color class="red">O</color><color class="green"> </color><color class="white">^</color><color class="green"> \</color><color class="brown">   |   
   </color><color class="green">/</color><color class="yellow">=====</color><color class="green">   </color><color class="red">O</color><color class="green">   </color><color class="red">O</color><color class="green">  </color><color class="white">^</color><color class="green">    \</color><color class="brown">  |   
  </color><color class="green">/______________________\</color><color class="brown"> |   
            |   |          |   
