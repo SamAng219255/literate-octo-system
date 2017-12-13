@@ -4,16 +4,16 @@ class thuemorse {
 		this.place=0
 		this.iteration=0
 		this.newValue=function () {
-			if(this.place<Math.pow(2,this.iteration)) {
-				this.place++
+			if(this.place<Math.pow(2,this.iteration)-1) {
 				this.values.push(!this.values[this.place])
-				return !this.values[this.place]
+				this.place++
+				return this.values[this.values.length-1]
 			}
 			else {
 				this.iteration++
-				this.place=0
 				this.values.push(!this.values[this.place])
-				return !this.values[this.place]
+				this.place=0
+				return this.values[this.values.length-1]
 			}
 		}
 	}
