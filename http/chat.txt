@@ -1,0 +1,2 @@
+chat alias:
+echo "alias speak='ssh <user>@10.183.2.9 write'" >> /home/<user>/.bash_aliases
