@@ -115,6 +115,16 @@
 			<p><input type="button" value="output" style="width: 100px;" onclick="outputGrav()"></p>
 			<p><input type="text" placeholder="input" style="width: 100px;" id="input"></p>
 			<p><input type="button" value="input" style="width: 100px;" onclick="inputGrav()"></p>
+			<p>Demos:</p>
+			<p><input type="text" placeholder="" style="width: 100px;" id="demomoon" onchange="demos()">Planet with moon.</p>
+			<p><input type="text" placeholder="" style="width: 100px;" id="demomars" onchange="demos()">Two Planets.</p>
+			<script>
+				function demos(){
+				document.getElementById("demomoon").value="{Earth:{color:\"#00FF88\",mass:81,radius:20,xPos:880,yPos:0,xVel:0,yVel:240},Sun:{color:\"#FFFF88\",mass:6561,radius:240,xPos:0,yPos:0,xVel:0,yVel:-3},Moon:{color:\"#FFFFFF\",mass:1,radius:5,xPos:910,yPos:0,xVel:0,yVel:400}}";
+				document.getElementById("demomars").value="{Sun:{mass:162,color:\"#FFFF88\",radius:40,xPos:0,yPos:0,xVel:-0.25,yVel:-3.5},Earth:{mass:4,color:\"#00FF88\",radius:10,xPos:100,yPos:0,xVel:0,yVel:120},Mars:{mass:1,color:\"#880000\",radius:5,xPos:350,yPos:0,xVel:0,yVel:60}}";
+				}
+				demos();
+			</script>
 			</div>
 		</div>
 	</div>
