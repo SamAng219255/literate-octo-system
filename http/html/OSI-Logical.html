@@ -1,0 +1,79 @@
+<html>
+<head>
+	<style>
+		body {
+			margin:0px;
+			width:100%;
+			min-height:100%;
+			overflow-y: auto;
+			overflow-x:hidden;
+			color:#707070;
+			font-weight:500;
+			font-family:helvetica;
+		}
+		p {
+			white-space: pre;
+		}
+		#tophalf {
+			height: 33%;
+			width: 100%;
+			background-color:#fffcf0;
+			color:#807870;
+			font-weight:900;
+			text-transform:uppercase;
+			font-family:helvetica;
+			position: relative;
+		}
+		#tophalf p {
+			position: absolute;
+			top: 32%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 24pt;
+			text-align:center;
+		}
+		#bottomhalf {
+			min-height: 67%;
+			width: 100%;
+			background-color:blue;
+		}
+		#selectionbar {
+			position:absolute;
+			bottom:5px;
+			text-align: center;
+			width:100%;
+		}
+		.selection {
+			background-color: #605a54;
+			color: transparent;
+			text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
+			position:relative;
+			bottom:0px;
+			cursor: pointer;
+			display: inline-block;
+			margin-left:5pt;
+			font-size: 18pt;
+		}
+	</style>
+	<title>Network OSI Layer</title>
+</head>
+<body>
+	<div id="tophalf">
+		<p>
+Network
+OSI Layer 3
+		</p>
+		<div id="selectionbar">
+			<div class="selection" onclick="console.log('thing happened')">Overview</div>
+			<div class="selection" onclick="console.log('thing happened')">IPV4</div>
+			<div class="selection" onclick="console.log('thing happened')">IPV6</div>
+			<div class="selection" onclick="console.log('thing happened')" style="margin-left:20pt;">Slide</div>
+		</div>
+	</div>
+	<div id="bottomhalf">
+	</div>
+</body>
+</html>
