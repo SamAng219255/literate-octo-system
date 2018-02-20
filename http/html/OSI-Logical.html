@@ -34,8 +34,11 @@
 		}
 		#bottomhalf {
 			min-height: 67%;
-			width: 100%;
+			width: 300%;
 			background-color:blue;
+			background-image: linear-gradient(to right, #0000ff, #ff0000, #00ff00, #0000ff);
+			position: absolute;
+			left:-000%
 		}
 		#selectionbar {
 			position:absolute;
@@ -57,23 +60,99 @@
 			margin-left:5pt;
 			font-size: 18pt;
 		}
+		.slide {
+			position: absolute;
+			width:33.333%;
+			height:100%;
+			background-color: #e0dcd0;
+			color:#807870;
+		}
+		#slide1 {
+			left:00.00000%;
+		}
+		#slide2 {
+			left:33.33333%;
+		}
+		#slide3 {
+			left:66.66667%;
+		}
 	</style>
 	<title>Network OSI Layer</title>
 </head>
 <body>
 	<div id="tophalf">
-		<p>
-Network
+		<p>Network
 OSI Layer 3
 		</p>
 		<div id="selectionbar">
-			<div class="selection" onclick="console.log('thing happened')">Overview</div>
-			<div class="selection" onclick="console.log('thing happened')">IPV4</div>
-			<div class="selection" onclick="console.log('thing happened')">IPV6</div>
-			<div class="selection" onclick="console.log('thing happened')" style="margin-left:20pt;">Slide</div>
+			<div class="selection" onclick="clearInterval(sstoi);time=0;target=-000;oldplace=progress;slide()">Overview</div>
+			<div class="selection" onclick="clearInterval(sstoi);time=0;target=-100;oldplace=progress;slide()">IPV4</div>
+			<div class="selection" onclick="clearInterval(sstoi);time=0;target=-200;oldplace=progress;slide()">IPV6</div>
+			<div class="selection" onclick="clearInterval(sstoi);currentslide=Math.ceil(-progress/100);slides()" style="margin-left:20pt;">Slide</div>
 		</div>
 	</div>
 	<div id="bottomhalf">
+		<div id="slide1" class="slide">
+		<pre></pre>
+		</div>
+		<div id="slide2" class="slide">
+			<ul>
+				<li>
+					IPV4 Deployed in 1981
+				</li>
+				<li>
+					IPV4 can be configured manually and by using dhcp
+				</li>
+				<li>
+					IPV4 uses both broadcast and multicast
+				</li>
+			</ul>
+		</div>
+		<div id="slide3" class="slide">
+			<ul>
+				<li>
+					IPV6 Deployed in 1999 
+				</li>
+				<li>
+					IPV6 can be configured manually, with (UPnP) Universal Plug and Play, or with DHCP
+				</li>
+				<li>
+					IPV6 has no broadcast and contains different forms of multicast
+				</li>
+				<li>
+					IPV6 has a better bandwidth efficiency
+				</li>
+				<li>
+					IPV6 Lowers operations expenses and reduces error with regard to configuration
+				</li>
+			</ul>
+		</div>
 	</div>
+	<script>
+		slideshow=document.getElementById("bottomhalf");
+		target=0;
+		time=0;
+		progress=0;
+		oldplace=0;
+		function slide() {
+			progress=((0.5-Math.cos(Math.PI*time/100)/2)*(target-oldplace)+oldplace);
+			slideshow.style="left: "+progress+"%;";
+			time++;
+			if(time<=100) {
+				setTimeout(slide,10);
+			}
+		}
+		currentslide=0;
+		sstoi=0;
+		function slides() {
+			time=0;
+			target=-100*currentslide;
+			oldplace=progress;
+			slide();
+			currentslide++;
+			currentslide%=3;
+			sstoi=setTimeout(slides,10000);
+		}
+	</script>
 </body>
 </html>
