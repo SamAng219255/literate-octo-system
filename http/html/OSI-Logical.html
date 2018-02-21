@@ -1,5 +1,7 @@
 <html>
 <head>
+	<meta charset="utf-8">
+	<link href="Icon.png" rel="shortcut icon">
 	<style>
 		body {
 			margin:0px;
@@ -29,16 +31,17 @@
 			top: 32%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			font-size: 24pt;
+			font-size: 33pt;
 			text-align:center;
 		}
 		#bottomhalf {
 			min-height: 67%;
-			width: 300%;
+			width: 400%;
 			background-color:blue;
-			background-image: linear-gradient(to right, #0000ff, #ff0000, #00ff00, #0000ff);
+			background-image: linear-gradient(to right, #0000ff, #ff0000, #00ff00, #0000ff, #ffffff);
 			position: absolute;
 			left:-000%
+                        overflow-x:hidden;
 		}
 		#selectionbar {
 			position:absolute;
@@ -49,7 +52,7 @@
 		.selection {
 			background-color: #605a54;
 			color: transparent;
-			text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+			text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
 			-webkit-background-clip: text;
 			-moz-background-clip: text;
 			background-clip: text;
@@ -58,23 +61,39 @@
 			cursor: pointer;
 			display: inline-block;
 			margin-left:5pt;
-			font-size: 18pt;
+			font-size: 24pt;
 		}
 		.slide {
+			margin-top: 1px;
 			position: absolute;
-			width:33.333%;
-			height:100%;
+			width:25%;
+			min-height:100%;
 			background-color: #e0dcd0;
 			color:#807870;
+			font-size: 18pt;
+                        overflow-x:hidden;
+		}
+		.slide ul {
+			margin-top: 42px;
 		}
 		#slide1 {
 			left:00.00000%;
 		}
 		#slide2 {
-			left:33.33333%;
+			left:25%;
 		}
 		#slide3 {
-			left:66.66667%;
+			left:50%;
+		}
+		#slide4 {
+			left:75%;
+		}
+		.slide h {
+			font-size: 24pt;
+			text-align: center;
+			left: 50%;
+			position: absolute;
+			transform: translate(-50%, 0%);
 		}
 	</style>
 	<title>Network OSI Layer</title>
@@ -93,39 +112,104 @@ OSI Layer 3
 	</div>
 	<div id="bottomhalf">
 		<div id="slide1" class="slide">
-		<pre></pre>
-		</div>
-		<div id="slide2" class="slide">
+			<h>Overview</h>
 			<ul>
 				<li>
-					IPV4 Deployed in 1981
+					Logical Addressing and Path Determination
 				</li>
 				<li>
-					IPV4 can be configured manually and by using dhcp
+					The network layer provides the functional and procedural means of transferring variable length data sequences (called datagrams) from one node to another connected in different networks.
 				</li>
 				<li>
-					IPV4 uses both broadcast and multicast
+					A network is a medium to which many nodes can be connected, on which every node has an address and which permits nodes connected to it to transfer messages to other nodes connected to it by merely providing the content of a message and the address of the destination node and letting the network find the way to deliver the message to the destination node, possibly routing it through intermediate nodes.
+				</li>
+				<li>
+					Large messages are often split into smaller pieces and sent seperately then reassembled at a later node.
+				</li>
+				<li>
+					A number of layer-management protocols, a function defined in the management annex, ISO 7498/4, belong to the network layer. These include routing protocols, multicast group management, network-layer information and error, and network-layer address assignment.
+				</li>
+			</ul>
+		</div>
+		<div id="slide2" class="slide">
+			<h>IPv4</h>
+			<ul>
+				<li>
+					Internet Protocal Version 4
+				</li>
+				<li>
+					Deployed in 1981
+				</li>
+				<li>
+					Can be configured manually and by using dhcp
+				</li>
+				<li>
+					Uses both broadcast and multicast
+				</li>
+				<li>
+					Addresses are made up of 32 bits allowing for a maximum of 2<sup>32</sup> or 4,294,967,296 unique addresses (a limit currently reached)
+				</li>
+				<li>
+					Often expressed in quad-dot format created by grouping the bits into 4 8-bit segments which are, in turn, displayed as decimal integers seperated by dots (e.g. 1100 0000 1011 0111 0000 0010 0000 1001 is converted to 192.183.2.9)
+				</li>
+				<li>
+					This is currently the most used internet protocol.
+				</li>
+			</ul>
+			<h>IPv5</h>
+			<ul style="margin-top:64px;">
+				<li>
+					IPv5 was a flop.
+				</li>
+				<li>
+					Had minor improvements over IPv4 but all the problems
+				</li>
+				<li>
+					Officially called Internet Stream Protocol (ST and later ST-II)
+				</li>
+				<li>
+					Never transitioned to public use.
 				</li>
 			</ul>
 		</div>
 		<div id="slide3" class="slide">
+			<h>IPv6</h>
 			<ul>
 				<li>
-					IPV6 Deployed in 1999 
+					Deployed in 1999 
 				</li>
 				<li>
-					IPV6 can be configured manually, with (UPnP) Universal Plug and Play, or with DHCP
+					Can be configured manually, with Universal Plug and Play (UPnP), or with DHCP
 				</li>
 				<li>
-					IPV6 has no broadcast and contains different forms of multicast
+					Has no broadcast and contains various forms of multicast
 				</li>
 				<li>
-					IPV6 has a better bandwidth efficiency
+					Better bandwidth efficiency
 				</li>
 				<li>
-					IPV6 Lowers operations expenses and reduces error with regard to configuration
+					Lowers operations expenses and reduces error with regard to configuration
+				</li>
+				<li>
+					Addresses are made up of 128 bits allowing for a maximum of 2<sup>128</sup> or 340,282,366,920,938,463,463,374,607,431,768,211,456 (3.4×10<sup>38</sup> or 340 Undecillion) unique addresses (a very big number though admittedly less than the number atoms in the Earth that being somewhere between 10<sup>49</sup> and 10<sup>50</sup>)
+				</li>
+				<li>
+					Often expressed as four hextets created by grouping the bits into 8 16-bit segments which are, in turn, displayed as hexadecimal integers seperated by colons (e.g. 0010 0110 0000 0000 0110 1100 0101 0100 0111 1000 0000 0000 0000 1000 1110 1001 0001 0000 0101 1110 0100 1111 1100 0101 0110 1010 1011 0000 0000 1100 0010 1111 is converted to 2600:6c54:7800:08e9:105e:4fc5:6ab0:c2f)
+				</li>
+				<li>
+					This is currently the newest internet protocol.
+				</li>
+				<li>
+					<a href="https://youtu.be/_y36fG2Oba0" target="_blank">A relevant song...</a>
 				</li>
 			</ul>
+		</div>
+		<div id="slide4" class="slide">
+			<pre>
+	ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ ᚷ ᚹ
+	ᚺ ᚾ ᛁ ᛃ ᛇ ᛈ ᛉ ᛊ
+	ᛏ ᛒ ᛖ ᛗ ᛚ ᛜ ᛟ ᛞ
+			</pre>
 		</div>
 	</div>
 	<script>
@@ -151,7 +235,7 @@ OSI Layer 3
 			slide();
 			currentslide++;
 			currentslide%=3;
-			sstoi=setTimeout(slides,10000);
+			sstoi=setTimeout(slides,60000);
 		}
 	</script>
 </body>
