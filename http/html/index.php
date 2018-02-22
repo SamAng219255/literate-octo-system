@@ -16,7 +16,7 @@
     }
     sort($filenames);
 	$thelist.='<ul>';
-    for ($i=0; $i<filecount; $i++) {
+    for ($i=0; $i<$filecount; $i++) {
 		$l='file';
 		if($filenames[i][1]) {
 			$l='directory';
