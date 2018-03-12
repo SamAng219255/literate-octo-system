@@ -16,18 +16,15 @@
 ?>
 <hr />
 <?php
-	session_start();
-	$_SESSION['pagename'] = "html index";
-	include "db/pushhits.php";
 	//error_reporting(0);
-	$thelist='';
+	
 	$filecount=0;
 	$filenames=array();
 
     if ($handle = opendir('.')) {
     while (false !== ($file = readdir($handle)))
     {
-        if ($file != "index.php" && $file != "indextheme.css" && ($file[0] != "." || $file==".."))
+        if ($file != "." && $file != "index.php" && $file != "indextheme.css")
         {
 			$ext = pathinfo($file,PATHINFO_EXTENSION);
 			$kind=0;

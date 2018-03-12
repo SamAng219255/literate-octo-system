@@ -1,0 +1,52 @@
+.file {
+	list-style-image: url("/img/file.png");
+}
+.directory {
+	list-style-image: url("/img/folder.png");
+}
+.image {
+	list-style-image: url("/img/image.png");
+}
+body {
+	background-color: #282830;
+	color: #c0c0d0;
+	font-family: helvetica;
+	font-weight:500;
+	text-decoration: none;
+}
+li a{
+	color: #c0c0d0;
+	font-family: helvetica;
+	font-weight:700;
+	text-decoration: none;
+}
+li a:visited{
+	color: #c0c0d0;
+	font-family: helvetica;
+	font-weight:700;
+	text-decoration: none;
+}
+li a:hover{
+	color: #d0d0e0;
+	font-family: helvetica;
+	font-weight:900;
+	text-decoration: none;
+}
+li a:active{
+	color: #e0e0ff;
+	font-family: helvetica;
+	font-weight:700;
+	text-decoration: none;
+}
+h1 {
+	color: #c0c0d0;
+	font-family: helvetica;
+	font-weight:700;
+	font-size: 28pt;
+}
+p {
+	color: #c0c0d0;
+	font-family: helvetica;
+	font-weight:700;
+	font-size: 14pt;
+}
